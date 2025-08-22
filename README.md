@@ -16,15 +16,15 @@ A simple, scalable mail service. Supports multiple mail providers, HTML template
 ### Installation
 
 ```bash
-npm install @your-org/mailer
+npm install @masummillat/mailer
 # or
-yarn add @your-org/mailer
+yarn add @masummillat/mailer
 ```
 
 ### Basic Usage
 
 ```typescript
-import { createEmailService } from "@your-org/mailer";
+import { createEmailService } from "@masummillat/mailer";
 
 // Initialize with direct configuration
 const emailService = await createEmailService({
@@ -205,7 +205,7 @@ app.get("/health", async (req, res) => {
 
 ```typescript
 import express from "express";
-import { createEmailService } from "@your-org/mailer";
+import { createEmailService } from "@masummillat/mailer";
 
 const app = express();
 let emailService;
@@ -223,7 +223,7 @@ app.listen(3000, async () => {
 
 ```typescript
 import { Injectable } from "@nestjs/common";
-import { createEmailService, SimpleEmailService } from "@your-org/mailer";
+import { createEmailService, SimpleEmailService } from "@masummillat/mailer";
 
 @Injectable()
 export class EmailService {
@@ -247,7 +247,7 @@ export class EmailService {
 ## Testing
 
 ```typescript
-import { createEmailService } from "@your-org/mailer";
+import { createEmailService } from "@masummillat/mailer";
 
 describe("Email Service", () => {
   it("should send test email", async () => {
