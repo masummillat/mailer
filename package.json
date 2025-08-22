@@ -1,0 +1,55 @@
+{
+  "name": "@masummillat/mailer",
+  "version": "1.0.0",
+  "description": "Simple mailer with multiple provider support",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Masum Millat <masummillat@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masummillat/mailer.git"
+  },
+  "homepage": "https://github.com/masummillat/mailer#readme",
+  "bugs": {
+    "url": "https://github.com/masummillat/mailer/issues"
+  },
+  "keywords": [
+    "mailer",
+    "email",
+    "nodemailer",
+    "sendgrid",
+    "typescript"
+  ],
+  "files": [
+    "dist",
+    "templates"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.0",
+    "@sendgrid/mail": "^8.1.0",
+    "handlebars": "^4.7.8",
+    "pino": "^8.17.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/nodemailer": "^6.4.0",
+    "typescript": "^5.0.0",
+    "jest": "^29.0.0",
+    "@types/jest": "^29.0.0",
+    "ts-jest": "^29.0.0"
+  },
+  "peerDependencies": {
+    "typescript": ">=4.5.0"
+  }
+}
