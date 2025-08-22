@@ -15,19 +15,14 @@ jobs:
         with:
           node-version: "18"
           registry-url: "https://registry.npmjs.org"
-          
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 8
 
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: npm install
 
       - name: Build
-        run: pnpm run build
+        run: npm run build
 
       - name: Publish to NPM
-        run: pnpm publish --no-git-checks
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
